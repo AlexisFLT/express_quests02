@@ -1,5 +1,6 @@
 const database = require("./database");
 
+
 const getUsers = (req, res) => {
   const initialSql = "select * from users";
   const where = [];
@@ -61,7 +62,7 @@ const postUser = (req, res) => {
 
   database
     .query(
-      "INSERT INTO users(firstname, lastname, email, city, language, hashedPassword) VALUES (?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users(firstname, lastname, email, city, language, password) VALUES (?, ?, ?, ?, ?, ?)",
       [firstname, lastname, email, city, language, hashedPassword]
     )
     .then(([result]) => {
@@ -112,6 +113,9 @@ const deleteUser = (req, res) => {
       res.status(500).send("Error deleting the user");
     });
 };
+
+
+
 
 module.exports = {
   getUsers,

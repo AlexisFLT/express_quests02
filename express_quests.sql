@@ -63,7 +63,8 @@ CREATE TABLE users (
     lastname varchar(255) NOT NULL,
     email varchar(255) UNIQUE NOT NULL,
     city varchar(255) DEFAULT NULL,
-    language varchar(255) DEFAULT NULL
+    language varchar(255) DEFAULT NULL,
+    hashedPassword varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 INSERT INTO
@@ -74,28 +75,32 @@ VALUES
     'Doe',
     'john.doe@example.com',
     'Paris',
-    'English'
+    'English',
+    "edokekjck,ekjo844e9,fejjkzodzi66"
   ),
   (
     'Valeriy',
     'Appius',
     'valeriy.appius@example.com',
     'Moscow',
-    'Russian'
+    'Russian',
+    "55efe5v9zd58zdllak,fz9d55fjvke"
   ),
   (
     'Ralf',
     'Geronimo',
     'ralf.geronimo@example.com',
     'New York',
-    'Italian'
+    'Italian',
+    "fnnfjejehdojoaSKOAJKEJFOPEQJIOKVPŜ6E5C5EEKEJQ"
   ),
   (
     'Maria',
     'Iskandar',
     'maria.iskandar@example.com',
     'New York',
-    'German'
+    'German',
+    "fedz8595f88rkahdhehgchvbdzj998d8fzààbz-*"
   ),
   (
     'Jane',
@@ -103,11 +108,13 @@ VALUES
     'jane.doe@example.com',
     'London',
     'English'
+    "nfjehjidzd$z*fùz5zfznjzjbdz"
   ),
   (
     'Johanna',
     'Martino',
     'johanna.martino@example.com',
     'Milan',
-    'Spanish'
+    'Spanish',
+    "hjchojoahziohyuhfueojazioa8z$zd*mzhajghjbz8l"
   );
